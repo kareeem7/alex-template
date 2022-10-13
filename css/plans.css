@@ -1,0 +1,314 @@
+/* start root */
+:root {
+  --main-color: #1cb599c9;
+  --sec-color: #777;
+}
+/* end root */
+/* start global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Castoro", serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+/* large screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+/* end global rules */
+/* start component */
+.btn {
+  background-color: black;
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  border-radius: 15px;
+  margin: 30px auto;
+  font-weight: 600;
+  transition: 0.5s;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: black;
+}
+/* end component */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container h2 {
+  padding-bottom: 10px;
+  color: var(--main-color);
+  font-weight: 900;
+}
+.header .container h4 {
+  text-align: center;
+  color: var(--sec-color);
+}
+.header .container .links {
+  display: flex;
+}
+.header .container .links .bar {
+  display: none;
+}
+.header .container .links ul {
+  display: flex;
+}
+.header .container .links ul li {
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.header .container .links ul li a {
+  color: black;
+  transition: 0.5s;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header .container .links ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.header .container .links span a,
+i {
+  color: var(--main-color);
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: 600;
+}
+.header .container .links span:hover a {
+  color: black;
+}
+.header .container .links span {
+  padding-left: 20px;
+}
+@media (max-width: 992px) {
+  .header .container .links .bar {
+    display: flex;
+  }
+  .header .container .links .bar i {
+    margin-right: 20px;
+    font-size: 28px;
+  }
+  .header .container .links {
+    position: relative;
+  }
+  .header .container .links ul {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(233, 229, 229);
+    border-radius: 10px;
+    width: 130px;
+  }
+
+  .header .container .links .nav::after {
+    content: " ";
+    border-color: transparent transparent rgb(233, 229, 229) transparent;
+    border-style: solid;
+    position: absolute;
+    border-width: 10px;
+    right: 104px;
+    top: -19px;
+  }
+  .header .container .links ul li:hover {
+    margin-left: 15px;
+  }
+  .header .container .links:hover .nav {
+    display: flex;
+  }
+}
+/* end header */
+.plans {
+  background-image: url(../images/main.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.plans .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.plans h1 {
+  font-size: 40px;
+}
+.plans .p-offer {
+  width: 378px;
+  margin: 20px;
+  font-weight: 600;
+}
+.plan-div {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plan-div .pln {
+  background-color: rgba(255, 255, 255, 0.384);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #fff;
+  height: 100vh;
+}
+.plan-div .pln:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.705);
+  position: relative;
+}
+.plan-div .pln:nth-child(2)::before{
+  content: " best value";
+  position: absolute;
+  content: " best value";
+    position: absolute;
+    top: -18px;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    right: 105px;
+}
+.plan-div .pln h3 {
+  margin-bottom: 30px;
+  color: black;
+  font-size: 25px;
+  font-weight: 800;
+}
+.plan-div .pln p {
+  font-weight: 600;
+}
+.plan-div .pln h2 {
+  margin: 20px;
+  font-size: 30px;
+}
+.plan-div .pln h2 span {
+  font-size: 20px;
+}
+.plan-div .pln span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+.plan-div .pln span i {
+  margin-right: 5px;
+}
+/*  */
+/* start contact */
+.contact {
+  background-color: var(--main-color);
+}
+.contact .container .text p {
+  margin: 30px;
+}
+.form {
+  width: 300px;
+}
+.contact .container .form input:not(:last-child) {
+  background-color: transparent;
+  margin-bottom: 20px;
+  border: 2px solid rgba(90, 90, 90, 0.753);
+  width: 300px;
+}
+.contact .container .form input:hover {
+  border: 2px solid black;
+}
+.contact .container .form input:nth-child(8) {
+  height: 200px;
+}
+.social i {
+  color: #fff;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+.social i:first-child:hover {
+  color: rgb(27, 138, 230);
+}
+.social i:nth-child(2):hover {
+  color: rgb(68, 200, 240);
+}
+.social i:nth-child(3):hover {
+  color: rgb(250, 114, 51);
+}
+.social i:nth-child(4):hover {
+  color: rgb(245, 40, 4);
+}
+/* end contact */
+/* mobile screen  */
+@media (max-width: 380px) {
+  .header .container h2 {
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  .header .container h4 {
+    font-size: 10px;
+  }
+  .header .container .links {
+    display: flex;
+    width: 130px;
+  }
+  .header .container .links span {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header .container .links span a {
+    font-size: 15px;
+    font-weight: 900;
+  }
+  .header .container .links .nav {
+    top: 40px;
+  }
+  .header .container .links .nav::after {
+    right: 89px;
+    top: -16px;
+  }
+  .contact .container {
+    display: flex;
+    flex-direction: column;
+  }
+}

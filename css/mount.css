@@ -1,0 +1,379 @@
+/* start root */
+:root {
+  --main-color: #12b7e9c9;
+  --sec-color: #777;
+}
+/* end root */
+/* start global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+body {
+  font-family: "Castoro", serif;
+  font-family: "Work Sans", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 980px;
+  }
+}
+/* large screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+/* end global rules */
+/* start component */
+.btn {
+  background-color: black;
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  border-radius: 15px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: 600;
+  transition: 0.5s;
+  text-align: center;
+}
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #fff;
+  color: black;
+}
+/* end component */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container h2 {
+  padding-bottom: 10px;
+  color: var(--main-color);
+  font-weight: 900;
+}
+.header .container h4 {
+  text-align: center;
+  color: var(--sec-color);
+}
+.header .container .links {
+  display: flex;
+}
+.header .container .links .bar {
+  display: none;
+}
+.header .container .links ul {
+  display: flex;
+}
+.header .container .links ul li {
+  transition: 0.5s;
+  padding-left: 10px;
+}
+.header .container .links ul li a {
+  color: black;
+  transition: 0.5s;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header .container .links ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.header .container .links span a,
+i {
+  color: var(--main-color);
+  transition: 0.5s;
+  font-size: 20px;
+  font-weight: 600;
+}
+.header .container .links span:hover a {
+  color: black;
+}
+.header .container .links span {
+  padding-left: 20px;
+}
+@media (max-width: 992px) {
+  .header .container .links .bar {
+    display: flex;
+  }
+  .header .container .links .bar i {
+    margin-right: 20px;
+    font-size: 28px;
+  }
+  .header .container .links {
+    position: relative;
+  }
+  .header .container .links ul {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgb(233, 229, 229);
+    border-radius: 10px;
+    width: 130px;
+  }
+
+  .header .container .links .nav::after {
+    content: " ";
+    border-color: transparent transparent rgb(233, 229, 229) transparent;
+    border-style: solid;
+    position: absolute;
+    border-width: 10px;
+    right: 104px;
+    top: -19px;
+  }
+  .header .container .links ul li:hover {
+    margin-left: 15px;
+  }
+  .header .container .links:hover .nav {
+    display: flex;
+  }
+}
+
+/*  */
+/* start landing */
+.landing {
+  background-image: url(../images/main.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.landing .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+.landing .text {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+.landing .text h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+  margin-top: 40px;
+}
+.landing .text h1 {
+  font-size: 88px;
+  margin: 20px 0 0;
+  color: #fff;
+}
+.landing .text h2 {
+  color: black;
+  opacity: 80%;
+}
+
+/* end landing */
+/* start about */
+.about .container .about-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+.about .container .about-text h2 {
+  color: var(--main-color);
+  font-size: 50px;
+}
+.about .container .about-text p {
+  padding: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.chef {
+  width: 450px;
+  height: 500px;
+}
+@media (max-width: 700px) {
+  .about .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .container .about-text p {
+    padding: 5px;
+    color: #333;
+    font-weight: 400;
+    width: 300px;
+  }
+}
+/* end about */
+/* start help */
+.help {
+  background-image: url(../images/main.jpg);
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+
+/* end help */
+/* start services  */
+.help .container {
+  position: relative;
+}
+.help .container span {
+  position: absolute;
+  left: 0;
+  color: var(--main-color);
+  top: 0;
+  font-size: 25px;
+  font-weight: 900;
+}
+.help .services {
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+.help .services .ser {
+  border: 2px solid #fff;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.help .services .ser h2 {
+  color: #fff;
+  padding-bottom: 20px;
+}
+.help .services .ser hr {
+  width: 80%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.help .services .ser p {
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+.help .services .ser .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* end services  */
+
+/* start contact */
+.contact {
+  background-color: var(--main-color);
+}
+.contact .container .text p {
+  margin: 30px;
+}
+.form {
+  width: 300px;
+}
+.contact .container .form input:not(:last-child) {
+  background-color: transparent;
+  margin-bottom: 20px;
+  border: 2px solid rgba(90, 90, 90, 0.753);
+  width: 200px;
+  transition: 0.3s;
+}
+.contact .container .form input:hover {
+  border: 2px solid black;
+}
+.contact .container .form input:nth-child(8) {
+  height: 200px;
+}
+.social i {
+  color: #fff;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+}
+.social i:first-child:hover {
+  color: rgb(27, 138, 230);
+}
+.social i:nth-child(2):hover {
+  color: rgb(68, 200, 240);
+}
+.social i:nth-child(3):hover {
+  color: rgb(250, 114, 51);
+}
+.social i:nth-child(4):hover {
+  color: rgb(245, 40, 4);
+}
+/* end contact */
+/* mobile screen  */
+@media (max-width: 380px) {
+  .landing .text {
+    width: 300px;
+  }
+  .landing .text h1 {
+    font-size: 60px;
+  }
+  .header .container h2 {
+    font-weight: 600;
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  .header .container h4 {
+    font-size: 10px;
+  }
+  .header .container .links {
+    display: flex;
+    width: 130px;
+  }
+  .header .container .links span {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .header .container .links span a {
+    font-size: 15px;
+    font-weight: 900;
+  }
+  .header .container .links .nav {
+    top: 40px;
+  }
+  .header .container .links .nav::after {
+    right: 89px;
+    top: -16px;
+  }
+  .chef {
+    width: 330px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .contact .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
